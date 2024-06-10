@@ -1,0 +1,12 @@
+services:
+  game:
+    build: .
+    environment:
+      - PZ_SERVER_NAME=SERVER
+      - PZ_ADMIN_PASSWORD=PASSWORD
+    ports:
+      - 8766:8766/udp
+      - 16261:16261/udp
+      - 16262:16262/udp
+    volumes:
+      - ./game:/home/pzserver/Zomboid
